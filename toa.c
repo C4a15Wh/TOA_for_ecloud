@@ -132,7 +132,7 @@ static void * get_toa_data(struct sk_buff *skb)
 			switch (opcode) {
 			case TCPOPT_EOL:
 				return NULL;
-			case TCPOPT_NOP:	/* Ref: RFC 793 section 3.1 */
+			case TCPOPT_NOP:	/* 详情请见: RFC 793 section 3.1 */
 				length--;
 				continue;
 			default:
@@ -141,8 +141,7 @@ static void * get_toa_data(struct sk_buff *skb)
 					return NULL;
 				if (opsize > length)
 					return NULL;	/* don't parse partial options */
-                /* OPCODE根据 */
-				if (opcode == TCPOPT_TOA && opsize == TCPOLEN_TOA) {
+				if (opcode == TCPOPT_TOA && opsize == TCPOLEN_TOA) { /* TCPOPT_TOA根据ecloud服务解包得到Option Code 200定义 */
 					memcpy(&tdata, ptr - 2, sizeof (tdata));
 					//TOA_DBG("find toa data: ip = %u.%u.%u.%u, port = %u\n", NIPQUAD(tdata.ip),
 						//ntohs(tdata.port));
