@@ -7,14 +7,6 @@
  *	with LVS FULLNAT model, the realservice are still able to receive real {IP,Port} info.
  *	So far, this module only supports IPv4 and IPv6 mapped IPv4.
  *
- * Authors: 
- * 	Wen Li	<steel.mental@gmail.com>
- *	Yan Tian   <tianyan.7c00@gmail.com>
- *	Jiaming Wu <pukong.wjm@taobao.com>
- *	Jiajun Chen  <mofan.cjj@taobao.com>
- *	Faicker Mo  <faicker.mo@ucloud.cn>
- *  Minghao Wei <weiminghao@stariver.org>
- *
  *	This program is free software; you can redistribute it and/or
  *	modify it under the terms of the GNU General Public License
  *	as published by the Free Software Foundation; either version
